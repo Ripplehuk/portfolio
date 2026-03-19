@@ -81,6 +81,7 @@ class ProfileForm
                         FileUpload::make('photo')
                             ->image()
                             ->disk('public')
+                            ->visibility('public')
                             ->directory('profiles/photos'),
                         FileUpload::make('cv_file')
                             ->disk('public')
