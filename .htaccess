@@ -1,0 +1,11 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Agar so'rov allaqachon /public ga ketgan bo'lsa, qayta yozma
+    RewriteCond %{REQUEST_URI} !^/public/
+
+    # Barcha so'rovlarni ichki tarzda /public ga yuborish
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
